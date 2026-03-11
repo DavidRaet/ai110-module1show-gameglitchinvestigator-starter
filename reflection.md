@@ -8,6 +8,12 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
 
+- Pressing enter after submitting your guess does not work 
+- the hint contradicts itself; tells you to go lower, when you should be going higher and vice versa
+- changing between difficulties does not change the description of which range of numbers to guess on 
+e.g (picking Easy should change the description "Guess a number between 1 and 20. Attempts left: 6" but stays "Guess a number between 1 and 100. Attempts left: 6")
+- I don't know if this should be considered a bug but having a negative score
+- guessing the secret does not result in successfully guessing the number 
 ---
 
 ## 2. How did you use AI as a teammate?
@@ -15,6 +21,8 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+
+For this project, I used both Github Copilot and Claude Code
 
 ---
 
