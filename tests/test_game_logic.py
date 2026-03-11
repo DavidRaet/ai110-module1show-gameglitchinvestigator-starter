@@ -1,5 +1,6 @@
 from logic_utils import check_guess
 
+
 def test_winning_guess():
     # If the secret is 50 and guess is 50, it should be a win
     result = check_guess(50, 50)
