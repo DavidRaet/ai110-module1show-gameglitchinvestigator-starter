@@ -13,7 +13,8 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - changing between difficulties does not change the description of which range of numbers to guess on 
 e.g (picking Easy should change the description "Guess a number between 1 and 20. Attempts left: 6" but stays "Guess a number between 1 and 100. Attempts left: 6")
 - I don't know if this should be considered a bug but having a negative score
-- guessing the secret does not result in successfully guessing the number 
+- guessing the secret does not result in successfully guessing the number
+(the secret is not being saved) 
 ---
 
 ## 2. How did you use AI as a teammate?
