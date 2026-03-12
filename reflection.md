@@ -22,8 +22,18 @@ e.g (picking Easy should change the description "Guess a number between 1 and 20
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
-For this project, I used both Github Copilot and Claude Code
+For this project, I used both Github Copilot and Claude Code to refactor two changes:
 
+- Github Copilot to move the necessary util functions that were in the app file into logic_utils. The LLM 
+was able to correctly move the necessary util functions into the logic_utils and removed them from the app.
+I added guardrails into the instructions of the prompt by telling the LLM to not tamper or refactor the 
+logic the functions in any way and only focus on moving them into the logic_utils file. 
+- Claude Code was used to fix a bug where the enter key wouldn't allow the user to submit the guess. 
+This was accomplished by putting Claude Code on planning mode by explaining what the bug was, the 
+requirements for the implementation, and including test cases using Playwright that verify the bug 
+was fixed. Because I put Claude Code on planning mode, I was able to thoroughly articulate what the goal
+was for solving the bug before asking it to add its implementations. Additionally, I ran the tests 
+and verified the implementation worked on the webpage. 
 ---
 
 ## 3. Debugging and testing your fixes
@@ -34,6 +44,11 @@ For this project, I used both Github Copilot and Claude Code
 - Did AI help you design or understand any tests? How?
 
 ---
+When a bugged was really fixed, a subsequent test targetting the bug should either pass or fail depending on the type of test
+write. For example, a conventional test for expected behavior or a "counter-test" that passes if the bug no longer exists (!bug)
+On one bug that did not let users submit their guess using enter, I explained the bug to Claude Code in plan mode and helped devise a multi-step plan
+that involved understanding the bug, implementing the fix, and writing a test that verified the fix. The model helped me better visualize what happens at
+each step (from the client to the server) and with methodical steps, made the tests that it generated easier to understand and intuitive. 
 
 ## 4. What did you learn about Streamlit and state?
 
