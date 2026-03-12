@@ -12,9 +12,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - the hint contradicts itself; tells you to go lower, when you should be going higher and vice versa
 - changing between difficulties does not change the description of which range of numbers to guess on 
 e.g (picking Easy should change the description "Guess a number between 1 and 20. Attempts left: 6" but stays "Guess a number between 1 and 100. Attempts left: 6")
-- I don't know if this should be considered a bug but having a negative score
 - guessing the secret does not result in successfully guessing the number
 (the secret is not being saved) 
+- I don't know if this should be considered a bug but having a negative score
+
 ---
 
 ## 2. How did you use AI as a teammate?
@@ -56,6 +57,15 @@ each step (from the client to the server) and with methodical steps, made the te
 - In your own words, explain why the secret number kept changing in the original app.
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
+
+Streamlit is a Python framework that runs Python scripts on web apps, which reruns on every event-based action and without a if 
+statement checking if there is already a secret in place, the secret number will always change when the user submits their guess. 
+If I were to explain Streamlit and session state to a friend who hasn't used Streamlit, I would tell them its like forgetting your 
+password everytime you login because you don't save it on your notes app, so you're just left always guessing your password. 
+
+With the mention of an if-statement, the if statement verifies the existance of a secret number. If so, the Python will script will run 
+without changing the secret number.  
+
 
 ---
 
