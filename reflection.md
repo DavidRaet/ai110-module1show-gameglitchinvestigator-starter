@@ -15,7 +15,7 @@ e.g (picking Easy should change the description "Guess a number between 1 and 20
 - guessing the secret does not result in successfully guessing the number
 (the secret is not being saved) 
 - I don't know if this should be considered a bug but having a negative score
-
+- clicking new game renders the game unplayable 
 ---
 
 ## 2. How did you use AI as a teammate?
