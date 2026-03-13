@@ -75,3 +75,10 @@ without changing the secret number.
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+After this project, I will continue to ensure that before or once I develop a feature, I write unit or integration tests that 
+target the expected behavior of the feature; essentially exercising my testing habit. 
+when using AI, I should be resourceful on which model I should be using (e.g a small feature that needs to be shipped or writing tests,
+using Claude Sonnet or making deep architectural decisions, use Claude Opus)
+I initally thought AI generated code was something I look at and accept, but this project profoundly made me conscious about 
+analyzing AI generated code and it's shortcomings. 
