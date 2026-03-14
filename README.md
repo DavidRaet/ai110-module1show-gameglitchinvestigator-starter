@@ -31,7 +31,7 @@ you will be prompted to guess higher since your guess was lower than the secret 
 - [X] Detail which bugs you found.
 Some of the most significant bugs that were found in this game were the secret always being changed after the user submitted the guess, clicking new game
 making the game unplayable, and the hint initially contradicting itself (go higher when your guess was too high and vice versa)
-- [ ] Explain what fixes you applied.
+- [X] Explain what fixes you applied.
 I applied all fixes to the bugs above through rigorous refactoring and testing with the assistance of AI. Additionally, I fixed
 client facing bugs such as the difficulty ranges being hardcoded and the attempts-left-number not being changed after the first click. 
 ## 📸 Demo
