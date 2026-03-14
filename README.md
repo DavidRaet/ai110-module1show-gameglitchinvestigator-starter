@@ -39,4 +39,4 @@ client facing bugs such as the difficulty ranges being hardcoded and the attempt
 - [X] [Insert a screenshot of your fixed, winning game here]
 ![Fixed Game](https://image2url.com/r2/default/images/1773446589932-aaac845b-5575-4b7a-871c-ea52b4b68fa2.png)
 ## 🚀 Stretch Features
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+![Edge Case Testing Image](https://image2url.com/r2/default/images/1773448412214-81b134d1-5c85-4133-999b-b4402fe4e1e3.png)
