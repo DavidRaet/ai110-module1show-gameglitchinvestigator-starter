@@ -20,6 +20,22 @@ def streamlit_server():
     proc.terminate()
     proc.wait()
 
+def test_no_input_shows_enter_a_guess_warning(page: Page):
+    page.goto(f"http://localhost:{PORT}")
+    page.get_by_role("button", name="Submit Guess 🚀").click()
+    expect(page.locator(".stAlert", has_text="Enter a guess.")).to_be_visible(timeout=6000)
+
+def test_non_numeric_input_shows_not_a_number_warning(page: Page):
+    page.goto(f"http://localhost:{PORT}")
+    page.get_by_label("Enter your guess:").fill("abc")
+    page.get_by_role("button", name="Submit Guess 🚀").click()
+    expect(page.locator(".stAlert", has_text="That is not a number.")).to_be_visible(timeout=6000)
+
+def test_negative_input_shows_greater_than_zero_warning(page: Page):
+    page.goto(f"http://localhost:{PORT}")
+    page.get_by_label("Enter your guess:").fill("-5")
+    page.get_by_role("button", name="Submit Guess 🚀").click()
+    expect(page.locator(".stAlert", has_text="Guess must be a non-negative number.")).to_be_visible(timeout=6000)
 
 def test_enter_key_submits_guess(page: Page):
     page.goto(f"http://localhost:{PORT}")
@@ -56,7 +72,7 @@ def _get_secret(page: Page) -> int:
     Closes and reopens the expander to ensure fresh DOM state after reruns.
     Initially, there was a testing issue being investigated on test_secret_changes_on_new_game
     where the secret value was stagnant even after clicking New Game. This was due to 
-    
+
     """
     expander = page.locator("details").filter(has_text="Developer Debug Info")
     # Close the expander if it's open to reset state
