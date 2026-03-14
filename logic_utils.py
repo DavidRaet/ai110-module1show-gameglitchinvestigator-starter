@@ -18,8 +18,12 @@ def parse_guess(raw: str):
     try:
         if "." in raw:
             value = int(float(raw))
+            if value < 0:
+                return False, None, "Guess must be a non-negative number."
         else:
             value = int(raw)
+            if value < 0:
+                return False, None, "Guess must be a non-negative number."
     except Exception:
         return False, None, "That is not a number."
 
